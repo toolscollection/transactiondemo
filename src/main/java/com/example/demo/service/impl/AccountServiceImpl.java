@@ -16,8 +16,6 @@ import java.math.BigDecimal;
 @Slf4j
 public class AccountServiceImpl extends ServiceImpl<AccountMapper, Account> implements AccountService {
 
-    @Resource
-    private DataSource dataSource;
     @Override
     @Transactional(rollbackFor = Exception.class)
     public void transfer(String fromAccount, String toAccount, BigDecimal amount) {
