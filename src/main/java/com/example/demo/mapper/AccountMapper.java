@@ -2,7 +2,7 @@ package com.example.demo.mapper;
 
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.demo.Account;
+import com.example.demo.entity.Account;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.math.BigDecimal;

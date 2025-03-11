@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.demo.Account;
+import com.example.demo.entity.Account;
 
 import java.math.BigDecimal;
 

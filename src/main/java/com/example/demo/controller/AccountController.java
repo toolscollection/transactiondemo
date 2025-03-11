@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.Account;
-import com.example.demo.dto.Result;
+import com.example.demo.entity.Account;
+import com.example.demo.entity.Result;
 import com.example.demo.dto.TransferDTO;
 import com.example.demo.service.AccountService;
 import lombok.extern.slf4j.Slf4j;
