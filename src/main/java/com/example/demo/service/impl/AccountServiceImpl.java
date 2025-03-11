@@ -25,14 +25,6 @@ public class AccountServiceImpl extends ServiceImpl<AccountMapper, Account> impl
     @Transactional(rollbackFor = Exception.class)
     public void transfer(String fromAccount, String toAccount, BigDecimal amount) {
 
-        try {
-            Connection connection = dataSource.getConnection();
-            log.info("数据库URL: {}", connection.getMetaData().getURL());
-            log.info("自动提交状态: {}", connection.getAutoCommit());
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
         //参数校验
         if (amount.compareTo(BigDecimal.ZERO) < 0) {
             throw new IllegalArgumentException("转账金额必须大于0");
