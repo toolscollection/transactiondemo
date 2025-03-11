@@ -1,0 +1,24 @@
+# 应用服务 WEB 访问端口
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.1.133:3306/accountpro?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 0318@Hadoop
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    hikari:&autoCommit=false
+#      auto-commit: false  # 明确设置为false
+#      transaction-isolation: TRANSACTION_READ_COMMITTED
+#      minimum-idle: 5
+#      maximum-pool-size: 15
+#      connection-timeout: 30000
+#      connection-test-query: SELECT 1
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  level:
+    org.springframework.transaction: TRACE  # 开启事务相关的详细日志
+    org.springframework.jdbc.datasource: TRACE
